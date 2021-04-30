@@ -16,7 +16,7 @@ WORKDIR /webmin
 
 # Initial configuration
 COPY ./ .
-RUN git clone https://github.com/authentic-theme/authentic-theme.git
+RUN git clone -b 19.75 --single-branch  https://github.com/authentic-theme/authentic-theme.git
 
 # Fix empty /usr/local/bin dir
 RUN rm -r /usr/local/bin/
